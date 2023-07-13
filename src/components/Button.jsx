@@ -1,11 +1,8 @@
 import React from 'react'
 
-function Button() {
+function Button(props) {
   return (
-    <div>
-
-        
-    </div>
+   <button onClick={props.changePic}>{props.symbols}</button>
   )
 }
 

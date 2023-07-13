@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Carousel() {
+function Carousel(props) {
   return (
-    <div>
-
-        
+    <div className='card'>
+      <img className='cardImg' src={props.images} />
     </div>
   )
 }

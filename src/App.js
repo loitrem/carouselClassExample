@@ -15,6 +15,7 @@ function App() {
 
   //------------------------------------- 3. destructure our state - first variable is anything - second is always setYourVariable = useState(Starting Value)
   const [count, setCount] = useState(0);
+  const [currentPic, setCurrentPic] = useState(cardImages[count]);
 
   //------------------------------------- 4. create functions that can be used as props that will useState hooka nd chage data in state
   //------------------------------------- Functions above return statement
@@ -29,7 +30,7 @@ function App() {
   //------------------------------------- 5. return statement
   return (
     <div className="App">
-      <Card/>
+      <Card currentCount={count} images={cardImages[count]}/>
       <Button className='leftButton' changePic={subCount} symbols={symbols.left}/>
       <Button className='rightButton' changePic={addCount} symbols={symbols.right}/>
     </div>
