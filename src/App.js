@@ -21,16 +21,20 @@ function App() {
   //------------------------------------- Functions above return statement
   const addCount = () => {
     setCount(count + 1);
+    setCurrentPic(cardImages[count]);
+    console.log(count);
   }
 
   const subCount = () => {
     setCount(count - 1);
+    setCurrentPic(cardImages[count]);
+    console.log(count);
   }
 
   //------------------------------------- 5. return statement
   return (
     <div className="App">
-      <Card currentCount={count} images={cardImages[count]}/>
+      <Card currentCount={count} images={currentPic}/>
       <Button className='leftButton' changePic={subCount} symbols={symbols.left}/>
       <Button className='rightButton' changePic={addCount} symbols={symbols.right}/>
     </div>
